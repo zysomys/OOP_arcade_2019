@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include "../games/nibbler/snake.hpp"
+#include "../games/pacman/include/pacman.hpp"
 
 class src_c {
     private:
@@ -21,8 +22,9 @@ class src_c {
 #define MENUX           2
 #define MENUY           0
 
-int menu(lib_c *lib, snake_c *libSnake);
-int main_bcl(lib_c *lib);
+int menu(lib_c *, snake_c *, pacman *);
+int main_bcl(lib_c *);
+
 
 std::vector<std::string> split_str(std::string str, char c);
 std::vector<std::string> file_exist(std::string path);

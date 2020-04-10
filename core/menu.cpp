@@ -61,7 +61,7 @@ int option(lib_c *lib, int move, std::vector<float> M_COORD, std::string opt)
     return move;
 }
 
-int menu(lib_c *lib, snake_c *libSnake)
+int menu(lib_c *lib, snake_c *libSnake, pacman *pac)
 {
     static std::string mn = "base";
     static std::vector<int> move = {0, 0};
@@ -75,6 +75,7 @@ int menu(lib_c *lib, snake_c *libSnake)
     } else if (mn == "snake") {
         mn = (libSnake->snake(lib, libSnake)) ? "base" : mn;
     } else if (mn == "pacman") {
+        mn = (pac->main_pacman(lib)) ? "base" : mn;
     }
 
     return (RET(mn));

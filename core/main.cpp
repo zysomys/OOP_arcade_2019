@@ -18,9 +18,18 @@ snake_c *nibblerGames()
     return (lib());
 }
 
+pacman *pacmanGame()
+{
+    void *_handle = dlopen("games/lib_arcade_pacman.so", RTLD_LAZY);
+    void *make = dlsym(_handle, "new_lib_pacman");
+    pacman_t *lib = (pacman_t *)make;
+    return (lib());
+}
+
 int main_bcl(lib_c *lib)
 {
     snake_c *libSnake = nibblerGames();
+    pacman *pac = pacmanGame();
 
     while (lib->isOpen()) {
         lib->clear();
@@ -28,7 +37,7 @@ int main_bcl(lib_c *lib)
 
         lib->draw_sprite({0, 0}, -1);
 
-        if (menu(lib, libSnake)) return(true);
+        if (menu(lib, libSnake, pac)) return(true);
 
         lib->display();
     }

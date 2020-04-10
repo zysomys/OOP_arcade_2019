@@ -9,7 +9,7 @@ SRC	=	$(shell find . -name "*.cpp")
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = ../lib_arcade_ncurses.so
+NAME = ../lib_arcade_pacman.so
 
 CC	=	g++
 

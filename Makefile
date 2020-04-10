@@ -21,7 +21,7 @@ core:
 
 games:
 		@cd games/nibbler/ && $(MAKE) -s all
-#		@cd games/pacman/ && $(MAKE) -s all
+		@cd games/pacman/ && $(MAKE) -s all
 
 graphicals:
 		@cd lib/lib_arcade_sfml/ && $(MAKE) -s all
@@ -39,7 +39,7 @@ $(NAME): $(OBJ)
 		@cd lib/lib_arcade_sfml/ && $(MAKE) -s all
 		@cd lib/lib_arcade_ncurses/ && $(MAKE) -s all
 		@cd games/nibbler/ && $(MAKE) -s all
-#		@cd games/pacman/ && $(MAKE) -s all
+		@cd games/pacman/ && $(MAKE) -s all
 
 clean:
 		@rm -f $(OBJ)
@@ -47,7 +47,7 @@ clean:
 		@cd lib/lib_arcade_sfml/ && $(MAKE) -s clean
 		@cd lib/lib_arcade_ncurses/ && $(MAKE) -s clean
 		@cd games/nibbler/ && $(MAKE) -s clean
-#		@cd games/pacman/ && $(MAKE) -s clean
+		@cd games/pacman/ && $(MAKE) -s clean
 
 fclean:	clean
 		@rm -f $(NAME)
@@ -55,7 +55,7 @@ fclean:	clean
 		@cd lib/lib_arcade_sfml/ && $(MAKE) -s fclean
 		@cd lib/lib_arcade_ncurses/ && $(MAKE) -s fclean
 		@cd games/nibbler/ && $(MAKE) -s fclean
-#		@cd games/pacman/ && $(MAKE) -s fclean
+		@cd games/pacman/ && $(MAKE) -s fclean
 
 
 re: fclean all
